@@ -12,6 +12,10 @@
 
 # testing
 /coverage
+/playwright-report/
+/test-results/
+/blob-report/
+/.playwright/
 
 # next.js
 /.next/
@@ -22,7 +26,16 @@
 
 # misc
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
 *.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
 
 # debug
 npm-debug.log*
@@ -30,8 +43,16 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (commit the documented example only)
 .env*
+!.env.example
+
+# local authentication and test credentials
+playwright/.auth/
+**/storage-state.json
+
+# local package-manager cache
+/.npm-cache/
 
 # vercel
 .vercel
